@@ -35,6 +35,7 @@ class LoginNeedsVerification extends Notification
      * Get the mail representation of the notification.
      */
     public function toTwilio($notifiable) {
+        
         $loginCode = rand(111111,999999);
         
         $notifiable -> update([
